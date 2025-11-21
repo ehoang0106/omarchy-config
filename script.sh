@@ -63,6 +63,41 @@ print_banner(){
 
 print_banner
 
+#checking prerequisites
+
+check_prerequisites() {
+  section "Checking Prerequisites"
+
+  #check if git is installed
+  if ! command -v git &> /dev/null; then
+    echo -e "${RED}Git is not installed. Please install Git and try again.${RESET}"
+    exit 1
+  else
+    echo -e "${GREEN}✓ Git is installed.${RESET}"
+  fi
+
+  #check if Waybar config directory exists
+  if [[ ! -d "$WAYBAR_CONFIG_DIR" ]]; then
+    echo -e "${RED}Waybar config directory not found at $WAYBAR_CONFIG_DIR. Please ensure Waybar is installed and configured.${RESET}"
+    exit 1
+  else
+    echo -e "${GREEN}✓ Waybar config directory found at $WAYBAR_CONFIG_DIR.${RESET}"
+  fi
+
+  #check if kitty is installed
+  if ! command -v kitty &> /dev/null; then
+    echo -e "${RED}Kitty terminal is not installed. Please install Kitty and try again.${RESET}"
+    exit 1
+  else
+    echo -e "${GREEN}✓ Kitty terminal is installed.${RESET}"
+  fi
+
+  echo -e "${GREEN}✓ All prerequisites are met.${RESET}"
+  sleep 1
+}
+
+check_prerequisites
+
 #------------WAYBAR CONFIGURATION-------------
 
 #backup the exsiting config.jsonc and style.css in ~/.config/waybar/
@@ -83,7 +118,7 @@ backup_waybar_config() {
   fi
 }
 
-backup_waybar_config
+#backup_waybar_config
 
 replacing_waybar_config() {
   section "Replacing Waybar Config Files"
@@ -104,14 +139,24 @@ replacing_waybar_config() {
 }
 
 
-replacing_waybar_config
+#replacing_waybar_config
 
 
 #------------END WAYBAR CONFIGURATION-------------
 
 
 
+#------------KITTY CONFIGURATION-------------
 
+kitty_config() {
+  section "Setting Up Kitty Terminal Configuration"
+  
+
+
+
+
+
+}
 
 
 
