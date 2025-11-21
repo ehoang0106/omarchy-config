@@ -5,12 +5,6 @@
 I have 2 PC running Omarchy OS, one is configured to my liking settings, the other is fresh installed.
 I'm too lazy to config the fresh one manually, so I wrote this script to automate the process of copying my config over.
 
-## Prerequisites
-
-- Git
-- Waybar (with config at `~/.config/waybar/`)
-- Kitty terminal
-
 ## What it does
 
 1. **Backs up Waybar config** - Creates `.bak` files of existing `config.jsonc` and `style.css`
