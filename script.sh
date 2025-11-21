@@ -62,7 +62,7 @@ print_banner(){
   echo -e "$ASCII_ART"
 }
 
-print_banner
+#print_banner
 
 #checking prerequisites
 
