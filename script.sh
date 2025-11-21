@@ -81,7 +81,7 @@ check_prerequisites() {
     echo -e "${RED}Waybar config directory not found at $WAYBAR_CONFIG_DIR. Please ensure Waybar is installed and configured.${RESET}"
     exit 1
   else
-    echo -e "${GREEN}✓ Waybar config directory found at $WAYBAR_CONFIG_DIR.${RESET}"
+    echo -e "${GREEN}✓ Waybar config directory is found.${RESET}"
   fi
 
   #check if kitty is installed
