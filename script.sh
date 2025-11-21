@@ -1,8 +1,11 @@
 #!/bin/bash
 
-set -e #exit on error
+set -eu # -e: exit on error, -u: treat unset variables as an error
 
+
+#===========
 #color
+#==========
 
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
@@ -11,7 +14,10 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
+#===========
 #section
+#===========
+
 
 section() {
   echo -e "${BOLD}${YELLOW}===================="
@@ -20,5 +26,9 @@ section() {
 
 }
 
-
+print_banner(){
+  echo -e "${BOLD}"
+  ASCII_ART=$(cat ascii.txt)
+  echo -e "$ASCII_ART"
+}
 
