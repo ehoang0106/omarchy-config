@@ -14,6 +14,13 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
+
+#===========
+#end-color
+#==========
+
+
+
 #===========
 #section
 #===========
@@ -26,13 +33,12 @@ section() {
 
 }
 
-print_banner(){
-  echo -e "${BOLD}"
-  ASCII_ART=$(cat ascii.txt)
-  echo -e "$ASCII_ART"
-}
 
-print_banner
+#===========
+#end-section
+#===========
+
+
 
 #==========
 #variables
@@ -44,8 +50,19 @@ GITHUB_REPO_URL="git@github.com:ehoang0106/omarchy-config.git"
 
 
 #==========
-#variables
+#end-variables
 #=========
+
+
+#print banner
+print_banner(){
+  echo -e "${BOLD}"
+  ASCII_ART=$(cat ascii.txt)
+  echo -e "$ASCII_ART"
+}
+
+print_banner
+
 
 
 #backup the exsiting config.jsonc and style.css in ~/.config/waybar/
