@@ -132,7 +132,7 @@ replacing_waybar_config() {
   cp config.jsonc $WAYBAR_CONFIG_DIR/config.jsonc
   cp style.css $WAYBAR_CONFIG_DIR/style.css
   echo -e "${GREEN}Waybar config files have been replaced successfully."
-  echo -e "${GREEN}Done.${RESET}"
+  echo -e "${GREEN}✓ Done.${RESET}"
   sleep 1
   cd $HOME
   echo -e "Reload Waybar to apply the new configuration..."
@@ -158,10 +158,9 @@ kitty_config() {
   sleep 1
 
   echo -e "${GREEN}Kitty terminal configuration completed.${RESET}"
-  echo -e "${GREEN}Done.${RESET}"
+  echo -e "${GREEN}✓ Done.${RESET}"
   sleep 1
   echo -e ""
-  echo -e "${YELLOW}Reboot is required to apply all changes.${RESET}"
 
 }
 
@@ -173,15 +172,21 @@ kitty_config
 
 #------------MAKE KITTY THE DEFAULT TERMINAL-------------
 
+TERMINAL_CONFIG_FILE=$HOME/.config/uwsm/default
+NEW_TERMINAL="kitty"
+OLD_TERMINAL="alacritty"
+
 kitty_default_terminal() {
   section "Setting Kitty as the Default Terminal"
-
-
-
-
-
-
+  echo -e "${YELLOW}Setting Kitty as the default terminal...${RESET}"
+  sleep 1
+  sed -i "s/export TERMINAL=$OLD_TERMINAL/export TERMINAL=$NEW_TERMINAL/g" $TERMINAL_CONFIG_FILE
+  echo -e "${GREEN}✓ Done."
+  echo -e ""
+  echo -e "${RED}Reboot is required to apply all changes.${RESET}"
+  echo -e ""
 }
 
+kitty_default_terminal
 
 
