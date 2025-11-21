@@ -20,9 +20,9 @@ RESET='\033[0m'
 
 
 section() {
-  echo -e "${BOLD}${YELLOW}===================="
+  echo -e "${BOLD}${YELLOW}======================================="
   echo -e "${BOLD}${BLUE}--- $1 ---${RESET}"
-  echo -e "${BOLD}${YELLOW}===================="
+  echo -e "${BOLD}${YELLOW}======================================="
 
 }
 
