@@ -96,6 +96,7 @@ replacing_waybar_config() {
   cp config.jsonc $WAYBAR_CONFIG_DIR/config.jsonc
   cp style.css $WAYBAR_CONFIG_DIR/style.css
   echo -e "${GREEN}Waybar config files have been replaced successfully."
+  echo "{GREEN}Done."
   sleep 1
 }
 
