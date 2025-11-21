@@ -152,15 +152,36 @@ replacing_waybar_config
 kitty_config() {
   section "Setting Up Kitty Terminal Configuration"
   
+  echo -e "${YELLOW}Configuring Kitty terminal...${RESET}"
+  cd $HOME/omarchy-config-script/omarchy-config/kitty
+  cp kitty.conf $HOME/.config/kitty/kitty.conf
+  sleep 1
+
+  echo -e "${GREEN}Kitty terminal configuration completed.${RESET}"
+  echo -e "${GREEN}Done.${RESET}"
+  sleep 1
+  echo -e ""
+  echo -e "${YELLOW}Reboot is required to apply all changes.${RESET}"
+
+}
+
+kitty_config
+
+#------------END KITTY CONFIGURATION-------------
+
+
+
+#------------MAKE KITTY THE DEFAULT TERMINAL-------------
+
+kitty_default_terminal() {
+  section "Setting Kitty as the Default Terminal"
+
 
 
 
 
 
 }
-
-
-
 
 
 
