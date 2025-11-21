@@ -63,7 +63,7 @@ print_banner(){
 
 print_banner
 
-
+#------------WAYBAR CONFIGURATION-------------
 
 #backup the exsiting config.jsonc and style.css in ~/.config/waybar/
 backup_waybar_config() {
@@ -105,6 +105,10 @@ replacing_waybar_config() {
 
 
 replacing_waybar_config
+
+
+#------------END WAYBAR CONFIGURATION-------------
+
 
 
 
