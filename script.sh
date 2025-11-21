@@ -28,9 +28,9 @@ RESET='\033[0m'
 
 section() {
   echo -e ""
-  echo -e "${BOLD}======================================="
+  echo -e "${BOLD}============================================"
   echo -e "${BOLD}--- $1 ---"
-  echo -e "${BOLD}======================================="
+  echo -e "${BOLD}============================================"
   echo -e ""
 }
 
@@ -183,7 +183,7 @@ kitty_default_terminal() {
   sed -i "s/export TERMINAL=$OLD_TERMINAL/export TERMINAL=$NEW_TERMINAL/g" $TERMINAL_CONFIG_FILE
   echo -e "${GREEN}✓ Done."
   echo -e ""
-  echo -e "${RED}Reboot is required to apply all changes.${RESET}"
+  echo -e "${YELLOW}⚠ REBOOT IS REQUIRED TO APPLY THE CHANGES. ⚠${RESET}"
   echo -e ""
 }
 
