@@ -69,21 +69,21 @@ print_banner
 backup_waybar_config() {
   section "Backing up Waybar Config Files"
   
-  echo -e "${YELLOW}Backing up existing Waybar config files..."
+  echo -e "${YELLOW}Backing up existing Waybar config files...${RESET}"
   sleep 1
   if [[ -f "$WAYBAR_CONFIG_DIR/config.jsonc" ]]; then
     cp $WAYBAR_CONFIG_DIR/config.jsonc $WAYBAR_CONFIG_DIR/config.jsonc.bak
     cp $WAYBAR_CONFIG_DIR/style.css $WAYBAR_CONFIG_DIR/style.css.bak
-    echo -e "${GREEN}Backup completed.$WAYBAR_CONFIG_DIR"
-    echo "${GREEN}Done."
+    echo -e "${GREEN}Backup completed.$WAYBAR_CONFIG_DIR${RESET}"
+    echo -e "${GREEN}Done.${RESET}"
     sleep 1
   else
-    echo -e "${RED}Unable to find existing Waybar config files. Exiting..."
+    echo -e "${RED}Unable to find existing Waybar config files. Exiting...${RESET}"
     exit 1
   fi
 }
 
-#backup_waybar_config
+backup_waybar_config
 
 replacing_waybar_config() {
   section "Replacing Waybar Config Files"
@@ -96,8 +96,11 @@ replacing_waybar_config() {
   cp config.jsonc $WAYBAR_CONFIG_DIR/config.jsonc
   cp style.css $WAYBAR_CONFIG_DIR/style.css
   echo -e "${GREEN}Waybar config files have been replaced successfully."
-  echo "{GREEN}Done."
+  echo -e "${GREEN}Done.${RESET}"
   sleep 1
+  cd $HOME
+  echo -e "Reload Waybar to apply the new configuration..."
+  hyprctl reload
 }
 
 
