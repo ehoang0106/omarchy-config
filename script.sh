@@ -44,7 +44,8 @@ backup_waybar_config() {
   if [[ -f "$WAYBAR_CONFIG_DIR/config.jsonc" ]]; then
     cp $WAYBAR_CONFIG_DIR/config.jsonc $WAYBAR_CONFIG_DIR/config.jsonc.bak
     cp $WAYBAR_CONFIG_DIR/style.css $WAYBAR_CONFIG_DIR/style.css.bak
-    echo -e "${GREEN}Backup completed: config.jsonc.bak and style.css.bak created in $WAYBAR_CONFIG_DIR"
+    echo -e "${GREEN}Backup completed.$WAYBAR_CONFIG_DIR"
+    pause 1
   else
     echo -e "${RED}Unable to find existing Waybar config files. Exiting..."
     exit 1
