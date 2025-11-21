@@ -38,12 +38,13 @@ section "Backing up Waybar Config Files"
 
 #backup the exsiting config.jsonc and style.css in ~/.config/waybar/
 backup_waybar_config() {
-  echo -e "${GREEN}Backing up existing Waybar config files..."
+  echo -e "${YELLOW}Backing up existing Waybar config files..."
+  pause 1
   WAYBAR_CONFIG_DIR="$HOME/.config/waybar"
   if [[ -f "$WAYBAR_CONFIG_DIR/config.jsonc" ]]; then
-    echo -e "${YELLOW}Backing up existing config.jsonc to config.jsonc.bak"
     cp $WAYBAR_CONFIG_DIR/config.jsonc $WAYBAR_CONFIG_DIR/config.jsonc.bak
     cp $WAYBAR_CONFIG_DIR/style.css $WAYBAR_CONFIG_DIR/style.css.bak
+    echo -e "${GREEN}Backup completed: config.jsonc.bak and style.css.bak created in $WAYBAR_CONFIG_DIR"
   else
     echo -e "${RED}Unable to find existing Waybar config files. Exiting..."
     exit 1
