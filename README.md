@@ -1,6 +1,9 @@
 # Omarchy Config Script
 
-A bash script to configure Waybar and Kitty terminal for Omarchy (Hyprland).
+## Purpose
+
+I have 2 PC running Omarchy OS, one is configured to my liking settings, the other is fresh installed.
+I'm too lazy to config the fresh one manually, so I wrote this script to automate the process of copying my config over.
 
 ## Prerequisites
 
@@ -17,13 +20,14 @@ A bash script to configure Waybar and Kitty terminal for Omarchy (Hyprland).
 
 ## Usage
 
-### Quick Install (curl)
+### One shot install!!!
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ehoang0106/omarchy-config/master/script.sh | bash
 ```
 
 ### Manual Install
+Clone this repo.
 
 ```bash
 chmod +x script.sh
@@ -34,4 +38,3 @@ chmod +x script.sh
 
 - A reboot is required after running to apply all changes
 - Backups are stored in `~/.config/waybar/` with `.bak` extension
-- Script files are cloned to `~/omarchy-config-script/`
