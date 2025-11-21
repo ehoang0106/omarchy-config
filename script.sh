@@ -27,10 +27,11 @@ RESET='\033[0m'
 
 
 section() {
+  echo -e ""
   echo -e "${BOLD}======================================="
   echo -e "${BOLD}--- $1 ---"
   echo -e "${BOLD}======================================="
-
+  echo -e ""
 }
 
 
@@ -118,7 +119,7 @@ backup_waybar_config() {
   fi
 }
 
-#backup_waybar_config
+backup_waybar_config
 
 replacing_waybar_config() {
   section "Replacing Waybar Config Files"
@@ -139,7 +140,7 @@ replacing_waybar_config() {
 }
 
 
-#replacing_waybar_config
+replacing_waybar_config
 
 
 #------------END WAYBAR CONFIGURATION-------------
