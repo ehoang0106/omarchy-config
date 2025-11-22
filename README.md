@@ -21,6 +21,7 @@ curl -fsSL https://raw.githubusercontent.com/ehoang0106/omarchy-config/master/sc
 ```
 
 
+Beauty console script:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ehoang0106/omarchy-config/master/claude-script.sh | bash
