@@ -16,12 +16,13 @@ I'm too lazy to config the fresh one manually, so I wrote this script to automat
 
 ### One shot install!!!
 
+Ugly console output script:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ehoang0106/omarchy-config/master/script.sh | bash
 ```
 
-
-Beauty console script:
+Beauty console script by Claude:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ehoang0106/omarchy-config/master/claude-script.sh | bash
