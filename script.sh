@@ -190,3 +190,42 @@ kitty_default_terminal() {
 kitty_default_terminal
 
 #------------END MAKE KITTY THE DEFAULT TERMINAL-------------
+
+
+#-------------MODIFY BINDING CONFIG FILE-------------
+
+modify_binding_cinfig() {
+
+  section "Modifying Key Binding Configuration"
+  echo -e "${YELLOW}Modifying bindings.conf for hyprland...${RESET}"
+  echo -e ""
+  sleep 1
+  
+  cp $HOME/omarchy-config-script/omarchy-config/hyprland/bindings.conf $HOME/.config/hyprland/bindings.conf
+  echo -e "${GREEN}✓ Done."
+  echo -e ""
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
