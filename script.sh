@@ -183,7 +183,6 @@ kitty_default_terminal() {
   sed -i "s/export TERMINAL=$OLD_TERMINAL/export TERMINAL=$NEW_TERMINAL/g" $TERMINAL_CONFIG_FILE
   echo -e "${GREEN}✓ Done."
   echo -e ""
-  echo -e "${YELLOW}⚠ REBOOT IS REQUIRED TO APPLY THE CHANGES. ⚠${RESET}"
   echo -e ""
 }
 
@@ -207,7 +206,21 @@ modify_binding_cinfig() {
 
 }
 
+#-------------END MODIFY BINDING CONFIG FILE-------------
 
+#-------------CLEAN UP-------------
+
+clean_up() {
+
+  section "Cleaning Up Temporary Files"
+  echo -e "${YELLOW}Removing temporary files...${RESET}"
+  sleep 1
+  rm -rf $HOME/omarchy-config-script
+  echo -e "${GREEN}✓ Done."
+  echo -e ""
+  
+  echo -e "${YELLOW}⚠ REBOOT IS REQUIRED TO APPLY THE CHANGES. ⚠${RESET}"
+}
 
 
 
