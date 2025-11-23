@@ -278,6 +278,38 @@ kitty_default_terminal() {
   spinner $! "Updating terminal configuration"
 
   success "Kitty is now the default terminal"
+}
+
+
+# Modify key binding configuration
+modify_binding_config() {
+  section "Modifying Key Binding Configuration"
+
+  info "Updating Hyprland key bindings..."
+
+  (
+    cp "$HOME/omarchy-config-script/omarchy-config/hyprland/bindings.conf" "$HOME/.config/hyprland/bindings.conf"
+    sleep 1
+  ) &
+  spinner $! "Copying bindings configuration"
+
+  success "Key binding configuration updated"
+}
+
+
+# Clean up temporary files
+clean_up() {
+  section "Cleaning Up"
+
+  info "Removing temporary files..."
+
+  (
+    rm -rf "$HOME/omarchy-config-script"
+    sleep 1
+  ) &
+  spinner $! "Cleaning up temporary files"
+
+  success "Temporary files removed"
   echo ""
 
   # Final message with animation
@@ -313,6 +345,8 @@ main() {
   replacing_waybar_config
   kitty_config
   kitty_default_terminal
+  modify_binding_config
+  clean_up
   print_completion
 }
 
